@@ -49,7 +49,7 @@ def get_h5_field_value(h5,songidx,field):
 def sanitize_value(value):
 	t = type(value)
 	if(t is numpy.bytes_):
-		return str(value,'utf-8')
+		return str(value)
 	return str(value)
 
 def sanitize_list(list):

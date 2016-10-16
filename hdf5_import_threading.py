@@ -1,6 +1,6 @@
 import sys
 import hdf5_import
-from queue import Queue
+from Queue import Queue
 from threading import Thread
 from time import sleep
 

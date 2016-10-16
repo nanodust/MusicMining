@@ -32,11 +32,12 @@ import tables
 
 
 def open_h5_file_read(h5filename):
+    print 'Reading filename... '+h5filename
     """
     Open an existing H5 in read mode.
     Same function as in hdf5_utils, here so we avoid one import
     """
-    return tables.openFile(h5filename, mode='r')
+    return tables.open_file(h5filename, mode='r')
 
 
 def get_num_songs(h5):
