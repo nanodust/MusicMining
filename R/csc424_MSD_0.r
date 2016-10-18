@@ -1,7 +1,7 @@
 install.packages("pairsD3")
 require("pairsD3")
 
-music <- read.csv("db.csv",header=TRUE)
+music <- read.csv("db_10k.csv",header=TRUE)
 
 #ridding of NA values
 music$artist_terms_freq[is.na(music$artist_terms_freq)] <- 0
@@ -28,6 +28,8 @@ music_cor = cor(music)
 
 # visualize it
 corrplot(music_cor, method="ellipse",order="AOE")
+
+# those two things break right now, some data issue 
 
 # try shiny
 
