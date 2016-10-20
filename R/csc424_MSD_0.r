@@ -91,7 +91,9 @@ pairs(music[,c(17,19,21,22,24)], lower.panel=panel.smooth,upper.panel=panel.cor,
 
 # Build the training/validate/test datasets.
 
-crs$dataset <- read.csv("db_10k.csv", na.strings=c(".", "NA", "", "?"), strip.white=TRUE, encoding="UTF-8")
+crs <- new.env(parent = baseenv())
+
+crs$dataset <- read.csv("db_modified.csv", na.strings=c(".", "NA", "", "?"), strip.white=TRUE, encoding="UTF-8")
 
 set.seed(993714) 
 crs$nobs <- nrow(crs$dataset) # 10000 observations 
